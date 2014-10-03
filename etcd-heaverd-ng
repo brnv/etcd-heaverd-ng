@@ -1,0 +1,5 @@
+ETCD_NAME=%HOST%
+ETCD_ADDR=%HOST%:4041
+ETCD_PEER_ADDR=%HOST%:7041
+ETCD_DATA_DIR=/var/lib/etcd/heaverd-ng
+ETCD_DISCOVERY=http://%DISCOVERY_HOST%/v2/keys/heaverd-cluster

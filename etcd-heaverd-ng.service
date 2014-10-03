@@ -1,0 +1,13 @@
+[Unit]
+Description=etcd-heaverd
+
+[Service]
+User=etcd
+PermissionsStartOnly=true
+EnvironmentFile=/etc/conf.d/etcd-heaverd-ng
+ExecStart=/usr/bin/etcd
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

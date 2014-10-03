@@ -1,0 +1,4 @@
+ETCD_NAME=discovery-service
+ETCD_ADDR=%HOST%:4441
+ETCD_PEER_ADDR=%HOST%:7771
+ETCD_DATA_DIR=/var/lib/etcd/discovery-service

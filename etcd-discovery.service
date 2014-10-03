@@ -1,0 +1,13 @@
+[Unit]
+Description=etcd-discovery
+
+[Service]
+User=etcd
+PermissionsStartOnly=true
+EnvironmentFile=/etc/conf.d/etcd-discovery
+ExecStart=/usr/bin/etcd
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
