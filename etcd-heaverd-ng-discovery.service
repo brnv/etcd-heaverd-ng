@@ -1,10 +1,10 @@
 [Unit]
-Description=etcd-discovery
+Description=etcd-heaverd-ng-discovery
 
 [Service]
 User=etcd
 PermissionsStartOnly=true
-EnvironmentFile=/etc/conf.d/etcd-discovery
+EnvironmentFile=/etc/conf.d/etcd-heaverd-ng-discovery
 ExecStart=/usr/bin/etcd
 Restart=always
 RestartSec=10s

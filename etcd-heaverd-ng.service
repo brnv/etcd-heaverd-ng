@@ -1,5 +1,5 @@
 [Unit]
-Description=etcd-heaverd
+Description=etcd-heaverd-ng
 
 [Service]
 User=etcd
