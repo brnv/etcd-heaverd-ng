@@ -1,7 +1,7 @@
 # Maintainer: Alexey Baranov <a.baranov@office.ngs.ru>
 
 pkgname=etcd-heaverd-ng
-pkgver=1
+pkgver=a329b9
 pkgrel=1
 pkgdesc="Etcd services and configs for heaverd-ng"
 arch=('x86_64')
@@ -9,6 +9,12 @@ license=('unknown')
 depends=('etcd')
 install='install.sh'
 md5sums=() #generate with 'makepkg -g'
+
+pkgver() {
+	cd $srcdir/../
+	VERSION=`git show-ref | grep master | head -n1 | cut -c 1-6`
+	printf $VERSION
+}
 
 package() {
 	mkdir -p $pkgdir/etc/conf.d/
